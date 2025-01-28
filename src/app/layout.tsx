@@ -1,5 +1,6 @@
 import '@/styles/global.css'
 import type { Metadata } from 'next'
+import { Toaster } from "@/components/ui/toaster"
 
 export const metadata: Metadata = {
   title: {
@@ -27,7 +28,10 @@ export default function RootLayout({
           href="/blog/feed.xml"
         />
       </head>
-      <body className="text-gray-950 antialiased">{children}</body>
+      <body className="text-gray-950 antialiased">
+          {children}
+          <Toaster />
+        </body>
     </html>
   )
 }
