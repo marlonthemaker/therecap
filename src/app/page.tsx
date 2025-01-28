@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 function Hero() {
   return (
     <div className="relative">
-      <Gradient className="absolute inset-2 bottom-0 rounded-4xl ring-1 ring-inset ring-black/5" />
+      <Gradient className="rounded-4xl absolute inset-2 bottom-0 ring-1 ring-inset ring-black/5" />
       <Container className="relative">
         <Navbar
           banner={
@@ -93,7 +93,7 @@ function BentoSection() {
             <div className="h-80 bg-[url(/screenshots/profile.png)] bg-[size:1000px_560px] bg-[left_-109px_top_-112px] bg-no-repeat" />
           }
           fade={['bottom']}
-          className="max-lg:rounded-t-4xl lg:col-span-3 lg:rounded-tl-4xl"
+          className="max-lg:rounded-t-4xl lg:rounded-tl-4xl lg:col-span-3"
         />
         <BentoCard
           eyebrow="Analysis"
@@ -103,7 +103,7 @@ function BentoSection() {
             <div className="absolute inset-0 bg-[url(/screenshots/competitors.png)] bg-[size:1100px_650px] bg-[left_-38px_top_-73px] bg-no-repeat" />
           }
           fade={['bottom']}
-          className="lg:col-span-3 lg:rounded-tr-4xl"
+          className="lg:rounded-tr-4xl lg:col-span-3"
         />
         <BentoCard
           eyebrow="Speed"
@@ -114,7 +114,7 @@ function BentoSection() {
               <Keyboard highlighted={['LeftCommand', 'LeftShift', 'D']} />
             </div>
           }
-          className="lg:col-span-2 lg:rounded-bl-4xl"
+          className="lg:rounded-bl-4xl lg:col-span-2"
         />
         <BentoCard
           eyebrow="Source"
@@ -128,7 +128,7 @@ function BentoSection() {
           title="Sell globally"
           description="Radiant helps you sell in locations currently under international embargo."
           graphic={<Map />}
-          className="max-lg:rounded-b-4xl lg:col-span-2 lg:rounded-br-4xl"
+          className="max-lg:rounded-b-4xl lg:rounded-br-4xl lg:col-span-2"
         />
       </div>
     </Container>
@@ -137,7 +137,7 @@ function BentoSection() {
 
 function DarkBentoSection() {
   return (
-    <div className="mx-2 mt-2 rounded-4xl bg-gray-900 py-32">
+    <div className="rounded-4xl mx-2 mt-2 bg-gray-900 py-32">
       <Container>
         <Subheading dark>Outreach</Subheading>
         <Heading as="h3" dark className="mt-2 max-w-3xl">
@@ -154,7 +154,7 @@ function DarkBentoSection() {
               <div className="h-80 bg-[url(/screenshots/networking.png)] bg-[size:851px_344px] bg-no-repeat" />
             }
             fade={['top']}
-            className="max-lg:rounded-t-4xl lg:col-span-4 lg:rounded-tl-4xl"
+            className="max-lg:rounded-t-4xl lg:rounded-tl-4xl lg:col-span-4"
           />
           <BentoCard
             dark
@@ -163,7 +163,7 @@ function DarkBentoSection() {
             description="With thousands of integrations, no one will be able to escape your cold outreach."
             graphic={<LogoTimeline />}
             // `!overflow-visible` is needed to work around a Chrome bug that disables the mask on the graphic.
-            className="z-10 !overflow-visible lg:col-span-2 lg:rounded-tr-4xl"
+            className="lg:rounded-tr-4xl z-10 !overflow-visible lg:col-span-2"
           />
           <BentoCard
             dark
@@ -171,7 +171,7 @@ function DarkBentoSection() {
             title="Smart call scheduling"
             description="Automatically insert intro calls into your leads' calendars without their consent."
             graphic={<LinkedAvatars />}
-            className="lg:col-span-2 lg:rounded-bl-4xl"
+            className="lg:rounded-bl-4xl lg:col-span-2"
           />
           <BentoCard
             dark
@@ -182,7 +182,7 @@ function DarkBentoSection() {
               <div className="h-80 bg-[url(/screenshots/engagement.png)] bg-[size:851px_344px] bg-no-repeat" />
             }
             fade={['top']}
-            className="max-lg:rounded-b-4xl lg:col-span-4 lg:rounded-br-4xl"
+            className="max-lg:rounded-b-4xl lg:rounded-br-4xl lg:col-span-4"
           />
         </div>
       </Container>

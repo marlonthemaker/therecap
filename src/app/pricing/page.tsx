@@ -122,7 +122,7 @@ function Header() {
 function PricingCards() {
   return (
     <div className="relative py-24">
-      <Gradient className="absolute inset-x-2 bottom-0 top-48 rounded-4xl ring-1 ring-inset ring-black/5" />
+      <Gradient className="rounded-4xl absolute inset-x-2 bottom-0 top-48 ring-1 ring-inset ring-black/5" />
       <Container className="relative">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           {tiers.map((tier, tierIndex) => (
@@ -137,8 +137,8 @@ function PricingCards() {
 
 function PricingCard({ tier }: { tier: (typeof tiers)[number] }) {
   return (
-    <div className="-m-2 grid grid-cols-1 rounded-4xl shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
-      <div className="grid grid-cols-1 rounded-4xl p-2 shadow-md shadow-black/5">
+    <div className="rounded-4xl -m-2 grid grid-cols-1 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
+      <div className="rounded-4xl grid grid-cols-1 p-2 shadow-md shadow-black/5">
         <div className="rounded-3xl bg-white p-10 pb-9 shadow-2xl ring-1 ring-black/5">
           <Subheading>{tier.name}</Subheading>
           <p className="mt-2 text-sm/6 text-gray-950/75">{tier.description}</p>
@@ -367,11 +367,11 @@ function PlusIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 function Testimonial() {
   return (
-    <div className="mx-2 my-24 rounded-4xl bg-gray-900 bg-[url(/dot-texture.svg)] pb-24 pt-72 lg:pt-36">
+    <div className="rounded-4xl mx-2 my-24 bg-gray-900 bg-[url(/dot-texture.svg)] pb-24 pt-72 lg:pt-36">
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-[384px_1fr_1fr]">
           <div className="-mt-96 lg:-mt-52">
-            <div className="-m-2 rounded-4xl bg-white/15 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:max-w-xs">
+            <div className="rounded-4xl -m-2 bg-white/15 shadow-[inset_0_0_2px_1px_#ffffff4d] ring-1 ring-black/5 max-lg:mx-auto max-lg:max-w-xs">
               <div className="rounded-4xl p-2 shadow-md shadow-black/5">
                 <div className="overflow-hidden rounded-3xl shadow-2xl outline outline-1 -outline-offset-1 outline-black/10">
                   <img
