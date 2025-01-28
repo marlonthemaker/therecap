@@ -1,7 +1,10 @@
 import '@/styles/global.css'
 import type { Metadata } from 'next'
 import { Toaster } from "@/components/ui/toaster"
-
+import { Inter } from 'next/font/google'
+import AuthProvider from '@/contexts/AuthContext'
+// "text-gray-950 antialiased"
+const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: {
     template: '%s - Radiant',
@@ -15,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true}>
       <head>
         <link
           rel="stylesheet"
@@ -28,9 +31,11 @@ export default function RootLayout({
           href="/blog/feed.xml"
         />
       </head>
-      <body className="text-gray-950 antialiased">
+      <body className={inter.className}>
+        <AuthProvider>
           {children}
           <Toaster />
+        </AuthProvider>
         </body>
     </html>
   )
