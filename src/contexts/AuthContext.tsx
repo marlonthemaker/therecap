@@ -79,7 +79,7 @@ const AuthProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
     const sendPasswordResetEmail = async (email: string) => {
         setLoading(true);
         try {
-             await sendPasswordResetEmail(auth, email);
+             await sendPasswordResetEmail(email);
              toast.success("Password reset email sent");
         } catch(error: any) {
             toast.error("Error sending password reset", { description: error.message})
